@@ -1,9 +1,3 @@
-[providers]
-providers = ["node"]
-
-[variables]
-PATH = "/root/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/app/node_modules/.bin:$PATH"
-
 [phases.setup]
 nixPkgs = ["nodejs_20", "pnpm"]
 
@@ -11,7 +5,10 @@ nixPkgs = ["nodejs_20", "pnpm"]
 cmds = ["pnpm install"]
 
 [phases.build]
-cmds = ["pnpm db:generate", "pnpm run build"]
+cmds = [
+  "pnpm db:generate",
+  "pnpm run build"
+]
 
 [start]
-cmd = "npx prisma db push || true && node dist/src/main"
+cmd = "pnpm --filter api db:push || true && pnpm --filter api start:prod"
