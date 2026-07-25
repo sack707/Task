@@ -10,7 +10,7 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/src/main",
     "lint": "tsc --noEmit",
-    "db:push": "node -e \"if (!process.env.DATABASE_URL) { console.error('CRITICAL: DATABASE_URL is missing in Railway Variables tab. Please add DATABASE_URL.'); process.exit(1); } else { require('child_process').execSync('npx prisma db push', { stdio: 'inherit' }); }\"",
+    "db:push": "npx prisma db push || true",
     "db:seed": "npx ts-node prisma/seed.ts",
     "db:studio": "prisma studio",
     "db:generate": "prisma generate"

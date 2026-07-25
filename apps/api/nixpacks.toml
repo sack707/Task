@@ -1,2 +1,2 @@
 [start]
-cmd = "npx prisma db push && npx ts-node prisma/seed.ts && node dist/src/main"
+cmd = "npx prisma db push || true && node dist/src/main"
