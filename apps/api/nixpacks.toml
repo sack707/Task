@@ -1,2 +1,11 @@
+[phases.setup]
+nixPkgs = ["pnpm"]
+
+[phases.install]
+cmds = ["pnpm install --frozen-lockfile"]
+
+[phases.build]
+cmds = ["pnpm db:generate", "pnpm run build"]
+
 [start]
 cmd = "npx prisma db push || true && node dist/src/main"
