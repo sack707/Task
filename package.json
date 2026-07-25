@@ -8,7 +8,7 @@
     "dev": "pnpm --parallel --filter \"./apps/*\" dev",
     "build:api": "pnpm --filter api build",
     "build:web": "pnpm --filter web build",
-    "build": "pnpm --recursive run build",
+    "build": "pnpm db:generate && pnpm --recursive run build",
     "start:api": "pnpm --filter api start:prod",
     "start:web": "pnpm --filter web start",
     "start": "pnpm --filter api db:push && pnpm --filter api db:seed && pnpm --filter api start:prod",

@@ -1,2 +1,5 @@
+[phases.build]
+cmds = ["pnpm db:generate", "pnpm run build"]
+
 [start]
 cmd = "pnpm --filter api db:push && pnpm --filter api db:seed && pnpm --filter api start:prod"
