@@ -21,6 +21,14 @@
   "devDependencies": {
     "typescript": "^5.7.2"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma",
+      "bcrypt"
+    ]
+  },
   "engines": {
     "node": ">=18.0.0"
   }
