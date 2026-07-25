@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsOptional, IsString, IsEnum, IsUUID, IsDateString } from 'class-validator';
-import { TaskStatus, TaskPriority } from '../../../generated/prisma-client';
+import { TaskStatus, TaskPriority } from '@prisma/client';
 
 export class UpdateTaskDto {
   @ApiProperty({ example: 'Updated task title', required: false })

@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsOptional, IsString, IsEnum, IsUUID, IsDateString } from 'class-validator';
-import { TaskStatus, TaskPriority } from '../../../generated/prisma-client';
+import { TaskStatus, TaskPriority } from '@prisma/client';
 
 export class CreateTaskDto {
   @ApiProperty({ example: 'Design System Figma Tokens', description: 'Task title' })
