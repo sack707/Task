@@ -17,11 +17,7 @@
     "db:seed": "pnpm --filter api db:seed",
     "lint": "pnpm --recursive run lint"
   },
-  "dependencies": {
-    "@prisma/client": "^6.2.1"
-  },
   "devDependencies": {
-    "prisma": "^6.2.1",
     "typescript": "^5.7.2"
   },
   "engines": {
